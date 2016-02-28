@@ -1,0 +1,1405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BuildeejiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BuilderDetails">
+          <Key>
+            <PropertyRef Name="BuilderID" />
+          </Key>
+          <Property Name="BuilderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuilderName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BuilderCompanyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BuilderPropertyImageName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BuilderAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="BuilderAddressPin" Type="int" />
+          <Property Name="BuilderPhone" Type="int" />
+          <Property Name="BuilderMobile" Type="int" />
+          <Property Name="BuilderEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="BuilderCity" Type="nvarchar" MaxLength="500" />
+          <Property Name="BuilderDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="BuilderDisplayPriority" Type="int" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Properties">
+          <Key>
+            <PropertyRef Name="PropertyId" />
+          </Key>
+          <Property Name="PropertyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyListingType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PropertyCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsResale" Type="nvarchar" MaxLength="10" />
+          <Property Name="PropertyAge" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="PropertyPrice" Type="decimal" Precision="20" Scale="3" />
+          <Property Name="PropertyProjectName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PropertyProjectLocality" Type="nvarchar" MaxLength="500" />
+          <Property Name="PropertyAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PropertyCity" Type="nvarchar" MaxLength="500" />
+          <Property Name="PropertyAddressPin" Type="int" />
+          <Property Name="PropertyMapLongitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="PropertyMapLatitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="PropertyComments" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PropertyBuiltUpArea" Type="decimal" Precision="20" Scale="5" />
+          <Property Name="PropertyBuiltUpAreaUnitType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PropertyCarpetArea" Type="decimal" Precision="20" Scale="5" />
+          <Property Name="PropertyCarpetAreaUnitType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PropertyPlotArea" Type="decimal" Precision="20" Scale="5" />
+          <Property Name="PropertyPlotAreaUnitType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PropertyAvailability" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyOwnership" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyListedBy" Type="int" />
+          <Property Name="PropertyListedOn" Type="datetime" />
+          <Property Name="PropertyPriyority" Type="int" />
+          <Property Name="ReviewdBY" Type="int" Nullable="false" />
+          <Property Name="ReviewdOn" Type="datetime" />
+          <Property Name="ApprovedBy" Type="int" Nullable="false" />
+          <Property Name="ApprovedOn" Type="datetime" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyAmenities">
+          <Key>
+            <PropertyRef Name="PropertyAmenityId" />
+          </Key>
+          <Property Name="PropertyAmenityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyAmenity" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="PropertyAmenitiesDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyAvailability">
+          <Key>
+            <PropertyRef Name="PropertyAvailabilityID" />
+          </Key>
+          <Property Name="PropertyAvailabilityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyAvailability" Type="nvarchar" MaxLength="100" />
+          <Property Name="AvailabilityDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyCategory">
+          <Key>
+            <PropertyRef Name="PropertyCategoryID" />
+          </Key>
+          <Property Name="PropertyCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyCategoryDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyDetails">
+          <Key>
+            <PropertyRef Name="PropertyDetailsId" />
+          </Key>
+          <Property Name="PropertyDetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyId" Type="int" />
+          <Property Name="SubCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyAmenityIDs" Type="nvarchar" MaxLength="100" />
+          <Property Name="Bedrroms" Type="int" />
+          <Property Name="Washrooms" Type="int" />
+          <Property Name="Balcony" Type="int" />
+          <Property Name="FloorNUmber" Type="int" />
+          <Property Name="TotalFloors" Type="int" />
+          <Property Name="Commets" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyIMageCategory">
+          <Key>
+            <PropertyRef Name="PropertyImageCategoryID" />
+          </Key>
+          <Property Name="PropertyImageCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyImageCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyIMageCategoryDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyIMages">
+          <Key>
+            <PropertyRef Name="PropertyImageName" />
+          </Key>
+          <Property Name="PropertyImageName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="PropertID" Type="int" Nullable="false" />
+          <Property Name="PropertyImageCategory" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PropertyImagePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyListingTypes">
+          <Key>
+            <PropertyRef Name="PropertyListingTypeID" />
+          </Key>
+          <Property Name="PropertyListingTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyListingType" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyListingTypeDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertySubCategory">
+          <Key>
+            <PropertyRef Name="PropertySubCategoryID" />
+          </Key>
+          <Property Name="PropertySubCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertySubCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertySubCategoryDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyVideos">
+          <Key>
+            <PropertyRef Name="PropertyVideoName" />
+          </Key>
+          <Property Name="PropertyVideoName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="PropertID" Type="int" Nullable="false" />
+          <Property Name="PropertyVideoCategory" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PropertyVideoPath" Type="nvarchar" MaxLength="500" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="100" />
+          <Property Name="RoleDesc" Type="nvarchar" MaxLength="500" />
+          <Property Name="RolesDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ServiceCategory">
+          <Key>
+            <PropertyRef Name="ServiceCategoryID" />
+          </Key>
+          <Property Name="ServiceCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="ServiceCategoryDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ServiceProviderDetails">
+          <Key>
+            <PropertyRef Name="ServiceProviderID" />
+          </Key>
+          <Property Name="ServiceProviderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceProviderName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceProviderCompanyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServicePropertyImageName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceProviderAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ServiceProviderAddressPin" Type="int" />
+          <Property Name="ServiceProviderPhone" Type="int" />
+          <Property Name="ServiceProviderMobile" Type="int" />
+          <Property Name="ServiceProviderEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="ServiceProviderCity" Type="nvarchar" MaxLength="500" />
+          <Property Name="ServiceProviderDisplayPriority" Type="int" />
+          <Property Name="ServiceProviderDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ServiceProviderMapping">
+          <Key>
+            <PropertyRef Name="ServiceProviderID" />
+          </Key>
+          <Property Name="ServiceProviderMappingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceSubCategoryID" Type="int" Nullable="false" />
+          <Property Name="ServiceProviderID" Type="int" Nullable="false" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ServiceSubCategory">
+          <Key>
+            <PropertyRef Name="ServiceSubCategoryID" />
+          </Key>
+          <Property Name="ServiceSubCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceCategory" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ServiceSubCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="ServiceSubCategoryDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UnitMeasures">
+          <Key>
+            <PropertyRef Name="UnitMeasureId" />
+          </Key>
+          <Property Name="UnitMeasureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UnitMeasure" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UnitMeasureDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserLoginDetails">
+          <Key>
+            <PropertyRef Name="UserLoginDetailID" />
+          </Key>
+          <Property Name="UserLoginDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="UserLoginDeviceType" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserLoginBrowserType" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserLoginDeviceIP" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserLoginLocation" Type="nvarchar" MaxLength="200" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserProfileID" />
+          </Key>
+          <Property Name="UserProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="UserRoleID" />
+          </Key>
+          <Property Name="UserRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="UserRoleDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="PasswordEncryptedText" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserTypes">
+          <Key>
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="UserTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserType" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserTypeDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WebsiteAdImages">
+          <Key>
+            <PropertyRef Name="WebsiteAdImageId" />
+          </Key>
+          <Property Name="WebsiteAdImageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Details" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="TagLine" Type="nvarchar" MaxLength="100" />
+          <Property Name="Url" Type="nvarchar" MaxLength="100" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="Expire" Type="datetime" />
+          <Property Name="ImagePriority" Type="int" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WebsiteAdVideos">
+          <Key>
+            <PropertyRef Name="WebsiteAdVideoId" />
+          </Key>
+          <Property Name="WebsiteAdVideoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Details" Type="nvarchar" MaxLength="50" />
+          <Property Name="VideoUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="TagLine" Type="nvarchar" MaxLength="100" />
+          <Property Name="Url" Type="nvarchar" MaxLength="100" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="Expire" Type="datetime" />
+          <Property Name="VideoPriority" Type="int" />
+          <Property Name="LanguageCulture" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsArchived" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="BuildeejiModelStoreContainer">
+          <EntitySet Name="BuilderDetails" EntityType="Self.BuilderDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Properties" EntityType="Self.Properties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyAmenities" EntityType="Self.PropertyAmenities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyAvailability" EntityType="Self.PropertyAvailability" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyCategory" EntityType="Self.PropertyCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyDetails" EntityType="Self.PropertyDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyIMageCategory" EntityType="Self.PropertyIMageCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyIMages" EntityType="Self.PropertyIMages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyListingTypes" EntityType="Self.PropertyListingTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertySubCategory" EntityType="Self.PropertySubCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyVideos" EntityType="Self.PropertyVideos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceCategory" EntityType="Self.ServiceCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceProviderDetails" EntityType="Self.ServiceProviderDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceProviderMapping" EntityType="Self.ServiceProviderMapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceSubCategory" EntityType="Self.ServiceSubCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UnitMeasures" EntityType="Self.UnitMeasures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserLoginDetails" EntityType="Self.UserLoginDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebsiteAdImages" EntityType="Self.WebsiteAdImages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebsiteAdVideos" EntityType="Self.WebsiteAdVideos" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BuildeejiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BuilderDetail">
+          <Key>
+            <PropertyRef Name="BuilderID" />
+          </Key>
+          <Property Name="BuilderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuilderName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderCompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderPropertyImageName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderAddressPin" Type="Int32" />
+          <Property Name="BuilderPhone" Type="Int32" />
+          <Property Name="BuilderMobile" Type="Int32" />
+          <Property Name="BuilderEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderDisplayPriority" Type="Int32" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Property">
+          <Key>
+            <PropertyRef Name="PropertyId" />
+          </Key>
+          <Property Name="PropertyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyListingType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsResale" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyAge" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="PropertyPrice" Type="Decimal" Precision="20" Scale="3" />
+          <Property Name="PropertyProjectName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyProjectLocality" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyAddressPin" Type="Int32" />
+          <Property Name="PropertyMapLongitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyMapLatitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyComments" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyBuiltUpArea" Type="Decimal" Precision="20" Scale="5" />
+          <Property Name="PropertyBuiltUpAreaUnitType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyCarpetArea" Type="Decimal" Precision="20" Scale="5" />
+          <Property Name="PropertyCarpetAreaUnitType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyPlotArea" Type="Decimal" Precision="20" Scale="5" />
+          <Property Name="PropertyPlotAreaUnitType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyAvailability" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyOwnership" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyListedBy" Type="Int32" />
+          <Property Name="PropertyListedOn" Type="DateTime" Precision="3" />
+          <Property Name="PropertyPriyority" Type="Int32" />
+          <Property Name="ReviewdBY" Type="Int32" Nullable="false" />
+          <Property Name="ReviewdOn" Type="DateTime" Precision="3" />
+          <Property Name="ApprovedBy" Type="Int32" Nullable="false" />
+          <Property Name="ApprovedOn" Type="DateTime" Precision="3" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyAmenity">
+          <Key>
+            <PropertyRef Name="PropertyAmenityId" />
+          </Key>
+          <Property Name="PropertyAmenityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyAmenity1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertyAmenitiesDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyAvailability">
+          <Key>
+            <PropertyRef Name="PropertyAvailabilityID" />
+          </Key>
+          <Property Name="PropertyAvailabilityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyAvailability1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AvailabilityDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyCategory">
+          <Key>
+            <PropertyRef Name="PropertyCategoryID" />
+          </Key>
+          <Property Name="PropertyCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyCategoryDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyDetail">
+          <Key>
+            <PropertyRef Name="PropertyDetailsId" />
+          </Key>
+          <Property Name="PropertyDetailsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyId" Type="Int32" />
+          <Property Name="SubCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyAmenityIDs" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Bedrroms" Type="Int32" />
+          <Property Name="Washrooms" Type="Int32" />
+          <Property Name="Balcony" Type="Int32" />
+          <Property Name="FloorNUmber" Type="Int32" />
+          <Property Name="TotalFloors" Type="Int32" />
+          <Property Name="Commets" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyIMageCategory">
+          <Key>
+            <PropertyRef Name="PropertyImageCategoryID" />
+          </Key>
+          <Property Name="PropertyImageCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyImageCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyIMageCategoryDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyIMage">
+          <Key>
+            <PropertyRef Name="PropertyImageName" />
+          </Key>
+          <Property Name="PropertyImageName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertID" Type="Int32" Nullable="false" />
+          <Property Name="PropertyImageCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertyImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyListingType">
+          <Key>
+            <PropertyRef Name="PropertyListingTypeID" />
+          </Key>
+          <Property Name="PropertyListingTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyListingType1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyListingTypeDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertySubCategory">
+          <Key>
+            <PropertyRef Name="PropertySubCategoryID" />
+          </Key>
+          <Property Name="PropertySubCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertySubCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertySubCategoryDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PropertyVideo">
+          <Key>
+            <PropertyRef Name="PropertyVideoName" />
+          </Key>
+          <Property Name="PropertyVideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertID" Type="Int32" Nullable="false" />
+          <Property Name="PropertyVideoCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertyVideoPath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RoleDesc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RolesDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ServiceCategory">
+          <Key>
+            <PropertyRef Name="ServiceCategoryID" />
+          </Key>
+          <Property Name="ServiceCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceCategoryDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ServiceProviderDetail">
+          <Key>
+            <PropertyRef Name="ServiceProviderID" />
+          </Key>
+          <Property Name="ServiceProviderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceProviderName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceProviderCompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServicePropertyImageName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceProviderAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceProviderAddressPin" Type="Int32" />
+          <Property Name="ServiceProviderPhone" Type="Int32" />
+          <Property Name="ServiceProviderMobile" Type="Int32" />
+          <Property Name="ServiceProviderEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceProviderCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceProviderDisplayPriority" Type="Int32" />
+          <Property Name="ServiceProviderDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ServiceProviderMapping">
+          <Key>
+            <PropertyRef Name="ServiceProviderID" />
+          </Key>
+          <Property Name="ServiceProviderMappingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceSubCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceProviderID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ServiceSubCategory">
+          <Key>
+            <PropertyRef Name="ServiceSubCategoryID" />
+          </Key>
+          <Property Name="ServiceSubCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServiceSubCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceSubCategoryDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="UnitMeasure">
+          <Key>
+            <PropertyRef Name="UnitMeasureId" />
+          </Key>
+          <Property Name="UnitMeasureId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitMeasure1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UnitMeasureDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserLoginDetail">
+          <Key>
+            <PropertyRef Name="UserLoginDetailID" />
+          </Key>
+          <Property Name="UserLoginDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserLoginDeviceType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserLoginBrowserType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserLoginDeviceIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserLoginLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserProfileID" />
+          </Key>
+          <Property Name="UserProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="UserRoleID" />
+          </Key>
+          <Property Name="UserRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="UserRoleDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordEncryptedText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserType1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserTypeDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="WebsiteAdImage">
+          <Key>
+            <PropertyRef Name="WebsiteAdImageId" />
+          </Key>
+          <Property Name="WebsiteAdImageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Details" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TagLine" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="Expire" Type="DateTime" Precision="3" />
+          <Property Name="ImagePriority" Type="Int32" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="WebsiteAdVideo">
+          <Key>
+            <PropertyRef Name="WebsiteAdVideoId" />
+          </Key>
+          <Property Name="WebsiteAdVideoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Details" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VideoUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TagLine" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="Expire" Type="DateTime" Precision="3" />
+          <Property Name="VideoPriority" Type="Int32" />
+          <Property Name="LanguageCulture" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsArchived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="BuildeejiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BuilderDetails" EntityType="Self.BuilderDetail" />
+          <EntitySet Name="Properties" EntityType="Self.Property" />
+          <EntitySet Name="PropertyAmenities" EntityType="Self.PropertyAmenity" />
+          <EntitySet Name="PropertyAvailabilities" EntityType="Self.PropertyAvailability" />
+          <EntitySet Name="PropertyCategories" EntityType="Self.PropertyCategory" />
+          <EntitySet Name="PropertyDetails" EntityType="Self.PropertyDetail" />
+          <EntitySet Name="PropertyIMageCategories" EntityType="Self.PropertyIMageCategory" />
+          <EntitySet Name="PropertyIMages" EntityType="Self.PropertyIMage" />
+          <EntitySet Name="PropertyListingTypes" EntityType="Self.PropertyListingType" />
+          <EntitySet Name="PropertySubCategories" EntityType="Self.PropertySubCategory" />
+          <EntitySet Name="PropertyVideos" EntityType="Self.PropertyVideo" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="ServiceCategories" EntityType="Self.ServiceCategory" />
+          <EntitySet Name="ServiceProviderDetails" EntityType="Self.ServiceProviderDetail" />
+          <EntitySet Name="ServiceProviderMappings" EntityType="Self.ServiceProviderMapping" />
+          <EntitySet Name="ServiceSubCategories" EntityType="Self.ServiceSubCategory" />
+          <EntitySet Name="UnitMeasures" EntityType="Self.UnitMeasure" />
+          <EntitySet Name="UserLoginDetails" EntityType="Self.UserLoginDetail" />
+          <EntitySet Name="UserProfiles" EntityType="Self.UserProfile" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+          <EntitySet Name="WebsiteAdImages" EntityType="Self.WebsiteAdImage" />
+          <EntitySet Name="WebsiteAdVideos" EntityType="Self.WebsiteAdVideo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BuildeejiModelStoreContainer" CdmEntityContainer="BuildeejiEntities">
+          <EntitySetMapping Name="BuilderDetails">
+            <EntityTypeMapping TypeName="BuildeejiModel.BuilderDetail">
+              <MappingFragment StoreEntitySet="BuilderDetails">
+                <ScalarProperty Name="BuilderID" ColumnName="BuilderID" />
+                <ScalarProperty Name="BuilderName" ColumnName="BuilderName" />
+                <ScalarProperty Name="BuilderCompanyName" ColumnName="BuilderCompanyName" />
+                <ScalarProperty Name="BuilderPropertyImageName" ColumnName="BuilderPropertyImageName" />
+                <ScalarProperty Name="BuilderAddress" ColumnName="BuilderAddress" />
+                <ScalarProperty Name="BuilderAddressPin" ColumnName="BuilderAddressPin" />
+                <ScalarProperty Name="BuilderPhone" ColumnName="BuilderPhone" />
+                <ScalarProperty Name="BuilderMobile" ColumnName="BuilderMobile" />
+                <ScalarProperty Name="BuilderEmail" ColumnName="BuilderEmail" />
+                <ScalarProperty Name="BuilderCity" ColumnName="BuilderCity" />
+                <ScalarProperty Name="BuilderDesc" ColumnName="BuilderDesc" />
+                <ScalarProperty Name="BuilderDisplayPriority" ColumnName="BuilderDisplayPriority" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Properties">
+            <EntityTypeMapping TypeName="BuildeejiModel.Property">
+              <MappingFragment StoreEntitySet="Properties">
+                <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+                <ScalarProperty Name="PropertyListingType" ColumnName="PropertyListingType" />
+                <ScalarProperty Name="PropertyCategory" ColumnName="PropertyCategory" />
+                <ScalarProperty Name="IsResale" ColumnName="IsResale" />
+                <ScalarProperty Name="PropertyAge" ColumnName="PropertyAge" />
+                <ScalarProperty Name="PropertyPrice" ColumnName="PropertyPrice" />
+                <ScalarProperty Name="PropertyProjectName" ColumnName="PropertyProjectName" />
+                <ScalarProperty Name="PropertyProjectLocality" ColumnName="PropertyProjectLocality" />
+                <ScalarProperty Name="PropertyAddress" ColumnName="PropertyAddress" />
+                <ScalarProperty Name="PropertyCity" ColumnName="PropertyCity" />
+                <ScalarProperty Name="PropertyAddressPin" ColumnName="PropertyAddressPin" />
+                <ScalarProperty Name="PropertyMapLongitude" ColumnName="PropertyMapLongitude" />
+                <ScalarProperty Name="PropertyMapLatitude" ColumnName="PropertyMapLatitude" />
+                <ScalarProperty Name="PropertyComments" ColumnName="PropertyComments" />
+                <ScalarProperty Name="PropertyBuiltUpArea" ColumnName="PropertyBuiltUpArea" />
+                <ScalarProperty Name="PropertyBuiltUpAreaUnitType" ColumnName="PropertyBuiltUpAreaUnitType" />
+                <ScalarProperty Name="PropertyCarpetArea" ColumnName="PropertyCarpetArea" />
+                <ScalarProperty Name="PropertyCarpetAreaUnitType" ColumnName="PropertyCarpetAreaUnitType" />
+                <ScalarProperty Name="PropertyPlotArea" ColumnName="PropertyPlotArea" />
+                <ScalarProperty Name="PropertyPlotAreaUnitType" ColumnName="PropertyPlotAreaUnitType" />
+                <ScalarProperty Name="PropertyAvailability" ColumnName="PropertyAvailability" />
+                <ScalarProperty Name="PropertyOwnership" ColumnName="PropertyOwnership" />
+                <ScalarProperty Name="PropertyListedBy" ColumnName="PropertyListedBy" />
+                <ScalarProperty Name="PropertyListedOn" ColumnName="PropertyListedOn" />
+                <ScalarProperty Name="PropertyPriyority" ColumnName="PropertyPriyority" />
+                <ScalarProperty Name="ReviewdBY" ColumnName="ReviewdBY" />
+                <ScalarProperty Name="ReviewdOn" ColumnName="ReviewdOn" />
+                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+                <ScalarProperty Name="ApprovedOn" ColumnName="ApprovedOn" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyAmenities">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyAmenity">
+              <MappingFragment StoreEntitySet="PropertyAmenities">
+                <ScalarProperty Name="PropertyAmenityId" ColumnName="PropertyAmenityId" />
+                <ScalarProperty Name="PropertyAmenity1" ColumnName="PropertyAmenity" />
+                <ScalarProperty Name="PropertyAmenitiesDesc" ColumnName="PropertyAmenitiesDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyAvailabilities">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyAvailability">
+              <MappingFragment StoreEntitySet="PropertyAvailability">
+                <ScalarProperty Name="PropertyAvailabilityID" ColumnName="PropertyAvailabilityID" />
+                <ScalarProperty Name="PropertyAvailability1" ColumnName="PropertyAvailability" />
+                <ScalarProperty Name="AvailabilityDesc" ColumnName="AvailabilityDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyCategories">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyCategory">
+              <MappingFragment StoreEntitySet="PropertyCategory">
+                <ScalarProperty Name="PropertyCategoryID" ColumnName="PropertyCategoryID" />
+                <ScalarProperty Name="PropertyCategory1" ColumnName="PropertyCategory" />
+                <ScalarProperty Name="PropertyCategoryDesc" ColumnName="PropertyCategoryDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyDetails">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyDetail">
+              <MappingFragment StoreEntitySet="PropertyDetails">
+                <ScalarProperty Name="PropertyDetailsId" ColumnName="PropertyDetailsId" />
+                <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+                <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+                <ScalarProperty Name="PropertyAmenityIDs" ColumnName="PropertyAmenityIDs" />
+                <ScalarProperty Name="Bedrroms" ColumnName="Bedrroms" />
+                <ScalarProperty Name="Washrooms" ColumnName="Washrooms" />
+                <ScalarProperty Name="Balcony" ColumnName="Balcony" />
+                <ScalarProperty Name="FloorNUmber" ColumnName="FloorNUmber" />
+                <ScalarProperty Name="TotalFloors" ColumnName="TotalFloors" />
+                <ScalarProperty Name="Commets" ColumnName="Commets" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyIMageCategories">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyIMageCategory">
+              <MappingFragment StoreEntitySet="PropertyIMageCategory">
+                <ScalarProperty Name="PropertyImageCategoryID" ColumnName="PropertyImageCategoryID" />
+                <ScalarProperty Name="PropertyImageCategory1" ColumnName="PropertyImageCategory" />
+                <ScalarProperty Name="PropertyIMageCategoryDesc" ColumnName="PropertyIMageCategoryDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyIMages">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyIMage">
+              <MappingFragment StoreEntitySet="PropertyIMages">
+                <ScalarProperty Name="PropertyImageName" ColumnName="PropertyImageName" />
+                <ScalarProperty Name="PropertID" ColumnName="PropertID" />
+                <ScalarProperty Name="PropertyImageCategory" ColumnName="PropertyImageCategory" />
+                <ScalarProperty Name="PropertyImagePath" ColumnName="PropertyImagePath" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyListingTypes">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyListingType">
+              <MappingFragment StoreEntitySet="PropertyListingTypes">
+                <ScalarProperty Name="PropertyListingTypeID" ColumnName="PropertyListingTypeID" />
+                <ScalarProperty Name="PropertyListingType1" ColumnName="PropertyListingType" />
+                <ScalarProperty Name="PropertyListingTypeDesc" ColumnName="PropertyListingTypeDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertySubCategories">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertySubCategory">
+              <MappingFragment StoreEntitySet="PropertySubCategory">
+                <ScalarProperty Name="PropertySubCategoryID" ColumnName="PropertySubCategoryID" />
+                <ScalarProperty Name="PropertyCategory" ColumnName="PropertyCategory" />
+                <ScalarProperty Name="PropertySubCategory1" ColumnName="PropertySubCategory" />
+                <ScalarProperty Name="PropertySubCategoryDesc" ColumnName="PropertySubCategoryDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyVideos">
+            <EntityTypeMapping TypeName="BuildeejiModel.PropertyVideo">
+              <MappingFragment StoreEntitySet="PropertyVideos">
+                <ScalarProperty Name="PropertyVideoName" ColumnName="PropertyVideoName" />
+                <ScalarProperty Name="PropertID" ColumnName="PropertID" />
+                <ScalarProperty Name="PropertyVideoCategory" ColumnName="PropertyVideoCategory" />
+                <ScalarProperty Name="PropertyVideoPath" ColumnName="PropertyVideoPath" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="BuildeejiModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+                <ScalarProperty Name="RolesDesc" ColumnName="RolesDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceCategories">
+            <EntityTypeMapping TypeName="BuildeejiModel.ServiceCategory">
+              <MappingFragment StoreEntitySet="ServiceCategory">
+                <ScalarProperty Name="ServiceCategoryID" ColumnName="ServiceCategoryID" />
+                <ScalarProperty Name="ServiceCategory1" ColumnName="ServiceCategory" />
+                <ScalarProperty Name="ServiceCategoryDesc" ColumnName="ServiceCategoryDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceProviderDetails">
+            <EntityTypeMapping TypeName="BuildeejiModel.ServiceProviderDetail">
+              <MappingFragment StoreEntitySet="ServiceProviderDetails">
+                <ScalarProperty Name="ServiceProviderID" ColumnName="ServiceProviderID" />
+                <ScalarProperty Name="ServiceProviderName" ColumnName="ServiceProviderName" />
+                <ScalarProperty Name="ServiceProviderCompanyName" ColumnName="ServiceProviderCompanyName" />
+                <ScalarProperty Name="ServicePropertyImageName" ColumnName="ServicePropertyImageName" />
+                <ScalarProperty Name="ServiceProviderAddress" ColumnName="ServiceProviderAddress" />
+                <ScalarProperty Name="ServiceProviderAddressPin" ColumnName="ServiceProviderAddressPin" />
+                <ScalarProperty Name="ServiceProviderPhone" ColumnName="ServiceProviderPhone" />
+                <ScalarProperty Name="ServiceProviderMobile" ColumnName="ServiceProviderMobile" />
+                <ScalarProperty Name="ServiceProviderEmail" ColumnName="ServiceProviderEmail" />
+                <ScalarProperty Name="ServiceProviderCity" ColumnName="ServiceProviderCity" />
+                <ScalarProperty Name="ServiceProviderDisplayPriority" ColumnName="ServiceProviderDisplayPriority" />
+                <ScalarProperty Name="ServiceProviderDesc" ColumnName="ServiceProviderDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceProviderMappings">
+            <EntityTypeMapping TypeName="BuildeejiModel.ServiceProviderMapping">
+              <MappingFragment StoreEntitySet="ServiceProviderMapping">
+                <ScalarProperty Name="ServiceProviderMappingID" ColumnName="ServiceProviderMappingID" />
+                <ScalarProperty Name="ServiceSubCategoryID" ColumnName="ServiceSubCategoryID" />
+                <ScalarProperty Name="ServiceProviderID" ColumnName="ServiceProviderID" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceSubCategories">
+            <EntityTypeMapping TypeName="BuildeejiModel.ServiceSubCategory">
+              <MappingFragment StoreEntitySet="ServiceSubCategory">
+                <ScalarProperty Name="ServiceSubCategoryID" ColumnName="ServiceSubCategoryID" />
+                <ScalarProperty Name="ServiceCategory" ColumnName="ServiceCategory" />
+                <ScalarProperty Name="ServiceSubCategory1" ColumnName="ServiceSubCategory" />
+                <ScalarProperty Name="ServiceSubCategoryDesc" ColumnName="ServiceSubCategoryDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitMeasures">
+            <EntityTypeMapping TypeName="BuildeejiModel.UnitMeasure">
+              <MappingFragment StoreEntitySet="UnitMeasures">
+                <ScalarProperty Name="UnitMeasureId" ColumnName="UnitMeasureId" />
+                <ScalarProperty Name="UnitMeasure1" ColumnName="UnitMeasure" />
+                <ScalarProperty Name="UnitMeasureDesc" ColumnName="UnitMeasureDesc" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserLoginDetails">
+            <EntityTypeMapping TypeName="BuildeejiModel.UserLoginDetail">
+              <MappingFragment StoreEntitySet="UserLoginDetails">
+                <ScalarProperty Name="UserLoginDetailID" ColumnName="UserLoginDetailID" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="UserLoginDeviceType" ColumnName="UserLoginDeviceType" />
+                <ScalarProperty Name="UserLoginBrowserType" ColumnName="UserLoginBrowserType" />
+                <ScalarProperty Name="UserLoginDeviceIP" ColumnName="UserLoginDeviceIP" />
+                <ScalarProperty Name="UserLoginLocation" ColumnName="UserLoginLocation" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProfiles">
+            <EntityTypeMapping TypeName="BuildeejiModel.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfile">
+                <ScalarProperty Name="UserProfileID" ColumnName="UserProfileID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="BuildeejiModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="UserRoleDesc" ColumnName="UserRoleDesc" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BuildeejiModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="PasswordEncryptedText" ColumnName="PasswordEncryptedText" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="BuildeejiModel.UserType">
+              <MappingFragment StoreEntitySet="UserTypes">
+                <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+                <ScalarProperty Name="UserType1" ColumnName="UserType" />
+                <ScalarProperty Name="UserTypeDesc" ColumnName="UserTypeDesc" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WebsiteAdImages">
+            <EntityTypeMapping TypeName="BuildeejiModel.WebsiteAdImage">
+              <MappingFragment StoreEntitySet="WebsiteAdImages">
+                <ScalarProperty Name="WebsiteAdImageId" ColumnName="WebsiteAdImageId" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="TagLine" ColumnName="TagLine" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Expire" ColumnName="Expire" />
+                <ScalarProperty Name="ImagePriority" ColumnName="ImagePriority" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WebsiteAdVideos">
+            <EntityTypeMapping TypeName="BuildeejiModel.WebsiteAdVideo">
+              <MappingFragment StoreEntitySet="WebsiteAdVideos">
+                <ScalarProperty Name="WebsiteAdVideoId" ColumnName="WebsiteAdVideoId" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="VideoUrl" ColumnName="VideoUrl" />
+                <ScalarProperty Name="TagLine" ColumnName="TagLine" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Expire" ColumnName="Expire" />
+                <ScalarProperty Name="VideoPriority" ColumnName="VideoPriority" />
+                <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
